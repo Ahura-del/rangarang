@@ -20,13 +20,18 @@ import type { Blog } from "@/types/blog";
 import { FaRegEye } from "react-icons/fa";
 import { FC } from "react";
 
+const getBlogs = async ()=>{
+try {
+  const req = await fetch(`${process.env.URL}/api/blog`);
+  const {data} = await req.json();
+  return data
+} catch (error) {
+  return {data :'blogs not fetch!'}
+}
+}
 
 const Blog:FC = async () => {
-  const getBlogs = async () => {
-    const req = await fetch("http://localhost:3000/api/blog");
-    return await req.json();
-  };
-  const { data } = await getBlogs();
+  const data =  await getBlogs();
 
   return (
     <section className="bg-gray-100 py-4">
