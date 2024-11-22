@@ -1,4 +1,4 @@
-"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -8,8 +8,12 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { MdChevronLeft } from "react-icons/md";
-import QandAData from "../assets/Data/QandA.json";
-const QandA = () => {
+import QandAData from "../../public/Data/QandA.json";
+import type{ QandA } from "@/types/qanda";
+import { FC } from "react";
+
+
+const QandA:FC = () => {
   return (
     <section className="py-4">
       <div className="px-2 lg:max-w-4xl xl:max-w-6xl mx-auto overflow-hidden">
@@ -24,7 +28,7 @@ const QandA = () => {
         </div>
         <div>
           <Accordion type="single" collapsible dir="rtl">
-            {QandAData.map((q) => (
+            {QandAData.map((q:QandA) => (
               <AccordionItem value={`item-${q.id}`} key={q.id}>
                 <AccordionTrigger>{q.quastion}</AccordionTrigger>
                 <AccordionContent>{q.answer}</AccordionContent>
