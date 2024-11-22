@@ -1,0 +1,28 @@
+[
+    {
+        "id":"1",
+        "name":"میز کانتر دو نفره",
+        "image":"/images/product1.png"
+    },
+    {
+        "id":"2",
+        "name":"رول آپ",
+        "image":"/images/product2.png"
+    }, {
+        "id":"3",
+        "name":"پاپ آپ",
+        "image":"/images/product3.png"
+    }, {
+        "id":"4",
+        "name":"استند ایکس",
+        "image":"/images/product1.png"
+    }, {
+        "id":"5",
+        "name":"شاسی ام دی اف",
+        "image":"/images/product2.png"
+    }, {
+        "id":"6",
+        "name":"شاسی ام دی اف",
+        "image":"/images/product3.png"
+    }
+]

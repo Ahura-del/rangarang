@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "label": "محصولات تبلیغاتی",
+    "category": "all"
+  },
+  {
+    "id": "2",
+    "label": "محصولات فوری و 24 ساعته",
+    "category": "urgent"
+  },
+  {
+    "id": "3",
+    "label": "چاپ عکس",
+    "category": "print"
+  },
+  {
+    "id": "4",
+    "label": "تبلیغات و بازاریابی",
+    "category": "ads"
+  }
+]
