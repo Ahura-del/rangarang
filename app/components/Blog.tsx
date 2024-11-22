@@ -1,4 +1,4 @@
-
+'use client'
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,22 +16,13 @@ import {
 } from "@/components/ui/carousel";
 import { MdChevronLeft } from "react-icons/md";
 import Image from "next/image";
-import type { Blog } from "@/types/blog";
+import type { BlogType } from "@/types/blog";
 import { FaRegEye } from "react-icons/fa";
-import { FC } from "react";
 
-const getBlogs = async ()=>{
-try {
-  const req = await fetch(`${process.env.URL}/api/blog`);
-  const {data} = await req.json();
-  return data
-} catch (error) {
-  return {data :'blogs not fetch!'}
-}
-}
 
-const Blog:FC = async () => {
-  const data =  await getBlogs();
+type Props = {data:BlogType[]}
+
+const Blog =  ({data}:Props) => {
 
   return (
     <section className="bg-gray-100 py-4">
@@ -51,7 +42,7 @@ const Blog:FC = async () => {
           className="w-full  max-w-fit "
         >
           <CarouselContent>
-            {data?.map((b: Blog) => (
+            {data.length > 0 && data?.map((b: BlogType) => (
               <CarouselItem key={b.id} className=" basis-11/12  lg:basis-1/3">
                 <Card className="rounded min-h-60 h-full group hover:bg-gray-700 transition-all duration-150">
                   <CardContent className=" aspect-square p-0 ">
