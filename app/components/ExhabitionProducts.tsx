@@ -29,7 +29,7 @@ const ExhabitionProducts:FC = () => {
           dir="ltr"
         >
           <Carousel
-            opts={{ loop: true  }}
+            opts={{ loop: true , align:"start" }}
             className="w-full lg:w-10/12 max-w-fit "
           >
             <CarouselPrevious className="rounded-none -left-2 z-20" />
