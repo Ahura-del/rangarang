@@ -6,7 +6,7 @@ import QandA from "./components/QandA";
 const getBlogs = async () => {
   try {
     const req = await fetch(
-      `${process.env.URL ?? "http://localhost:3000"}/api`,
+      `${process.env.NEXT_PUBLIC_URL}/api`,
       { method: "GET", headers: { "content-type": "application/json" } }
     );
     const { data } = await req.json();
