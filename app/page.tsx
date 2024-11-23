@@ -7,7 +7,7 @@ const getBlogs = async () => {
   try {
     const req = await fetch(
       `${process.env.NEXT_PUBLIC_URL}/api`,
-      { method: "GET", headers: { "content-type": "application/json" } }
+      { method: "GET"}
     );
     const { data } = await req.json();
     return data;
